@@ -12,7 +12,8 @@ Bu proje, [şu Google Dokümanı’nda](https://docs.google.com/document/d/1M5kv
 
 ## Ekran Görüntüsü
 
-https://raw.githubusercontent.com/epiusu/youtubefavchanels/refs/heads/main/screen-f-y-c.png
+<img src="https://raw.githubusercontent.com/epiusu/youtubefavchanels/refs/heads/main/screen-f-y-c.png" alt="img" class="responsive">
+
 
 ## 📂 Dosya Yapısı
 
