@@ -10,6 +10,10 @@ Bu proje, [şu Google Dokümanı’nda](https://docs.google.com/document/d/1M5kv
 - **Tamamen duyarlı (responsive)** – mobil, tablet ve masaüstünde kusursuz görünür.
 - **Tek dosya** – tüm stiller ve mantık `index.html` içinde, kurulum gerektirmez.
 
+## Ekran Görüntüsü
+
+https://raw.githubusercontent.com/epiusu/youtubefavchanels/refs/heads/main/screen-f-y-c.png
+
 ## 📂 Dosya Yapısı
 
 
@@ -32,11 +36,11 @@ Listeye yeni kanal veya kaynak eklemek isterseniz:
 
 ## 📄 Lisans
 
-Bu proje herkese açıktır ve [MIT Lisansı](https://choosealicense.com/licenses/mit/) ile lisanslanmıştır. Listedeki tüm içerikler ilgili sahiplerine aittir.
+Bu proje herkese açıktır ve [GNU GPLv3 Lisansı](https://choosealicense.com/licenses/gpl-3.0/) ile lisanslanmıştır. Listedeki tüm içerikler ilgili sahiplerine aittir.
 
 ## 🌟 Teşekkürler
 
-Orijinal liste [Google Docs](https://docs.google.com/document/d/1M5kvDldTCDCNgrlNx6fcDF1h81fnKX6Ovvm20L06Jtk/edit) üzerinden derlenmiştir. Listeyi oluşturan ve güncelleyen herkese teşekkürler.
+Orijinal liste [Google Docs](https://github.com/PrejudiceNeutrino/YouTube_Channels) üzerinden derlenmiştir. Listeyi oluşturan ve güncelleyen herkese teşekkürler.
 
 ---
 
