@@ -1,6 +1,6 @@
 # 📺 Harika Kanallar & Kaynaklar
 
-Bu proje, [şu Google Dokümanı’nda](https://docs.google.com/document/d/1M5kvDldTCDCNgrlNx6fcDF1h81fnKX6Ovvm20L06Jtk/edit) toplanmış olan **500’den fazla YouTube kanalını** ve **podcast, web sitesi, eklenti, yazılım** gibi diğer kaynakları tek bir modern web arayüzünde sunar.
+Bu proje, [şu Google Dokümanı’nda](https://github.com/PrejudiceNeutrino/YouTube_Channels) toplanmış olan **500’den fazla YouTube kanalını** ve **podcast, web sitesi, eklenti, yazılım** gibi diğer kaynakları tek bir modern web arayüzünde sunar.
 
 ## 🚀 Özellikler
 
