@@ -1,6 +1,6 @@
 # 📺 Harika Kanallar & Kaynaklar
 
-Bu proje, [şu Google Dokümanı’nda](https://github.com/PrejudiceNeutrino/YouTube_Channels) toplanmış olan **500’den fazla YouTube kanalını** ve **podcast, web sitesi, eklenti, yazılım** gibi diğer kaynakları tek bir modern web arayüzünde sunar.
+Bu proje, [şu Github](https://github.com/PrejudiceNeutrino/YouTube_Channels) toplanmış olan **500’den fazla YouTube kanalını** ve **podcast, web sitesi, eklenti, yazılım** gibi diğer kaynakları tek bir modern web arayüzünde sunar.
 
 ## 🚀 Özellikler
 
@@ -41,7 +41,7 @@ Bu proje herkese açıktır ve [GNU GPLv3 Lisansı](https://choosealicense.com/l
 
 ## 🌟 Teşekkürler
 
-Orijinal liste [Google Docs](https://github.com/PrejudiceNeutrino/YouTube_Channels) üzerinden derlenmiştir. Listeyi oluşturan ve güncelleyen herkese teşekkürler.
+Orijinal liste [Github](https://github.com/PrejudiceNeutrino/YouTube_Channels) üzerinden derlenmiştir. Listeyi oluşturan ve güncelleyen herkese teşekkürler.
 
 ---
 
