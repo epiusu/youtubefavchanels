@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>📺 Harika Kanallar & Kaynaklar</title>
+    <title>Harika Kanallar & Kaynaklar</title>
+    <!-- Font Awesome (genel ikonlar için) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* ---------- RESET & GENEL ---------- */
@@ -14,46 +15,54 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0d1117;
-            color: #e6edf3;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0b0e14;
+            color: #e8edf5;
             padding: 1.5rem;
             min-height: 100vh;
+            background-image: radial-gradient(circle at 10% 20%, rgba(30, 60, 80, 0.15) 0%, transparent 60%);
         }
 
         #app {
-            max-width: 1400px;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
-        /* ---------- SLIDER (üstte) ---------- */
+        /* ---------- SLIDER ---------- */
         .slider-container {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 0.8rem 1.2rem;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            position: relative;
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(4px);
+            border: 1px solid #2a323d;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         .slider-container h3 {
             font-size: 0.95rem;
             font-weight: 500;
-            margin-bottom: 0.6rem;
-            color: #c9d1d9;
+            margin-bottom: 0.75rem;
+            color: #b0c4d9;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .slider-container h3 i {
+            color: #f0883e;
+            font-size: 1rem;
         }
         .slider-track {
             display: flex;
             gap: 1rem;
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
         }
         .slider-track::-webkit-scrollbar {
             height: 4px;
         }
         .slider-track::-webkit-scrollbar-thumb {
-            background: #2d5a3d;
+            background: #3a6a4a;
             border-radius: 4px;
         }
         .slider-item {
@@ -61,17 +70,23 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            background: #0d1117;
-            border-radius: 8px;
-            padding: 0.4rem 0.8rem 0.4rem 0.4rem;
-            border: 1px solid #30363d;
+            background: #0f141c;
+            border-radius: 12px;
+            padding: 0.4rem 1rem 0.4rem 0.4rem;
+            border: 1px solid #2a323d;
             white-space: nowrap;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .slider-item:hover {
+            border-color: #4a8c6a;
+            transform: translateY(-2px);
         }
         .slider-item img {
             width: 36px;
             height: 36px;
             border-radius: 50%;
             object-fit: cover;
+            background: #1e2630;
         }
         .slider-item .info {
             display: flex;
@@ -80,29 +95,35 @@
             line-height: 1.3;
         }
         .slider-item .info .name {
-            color: #58a6ff;
+            color: #6cb4ee;
             font-weight: 500;
         }
         .slider-item .info .date {
-            color: #8b949e;
+            color: #8b9bb0;
         }
 
-        /* ---------- BAŞLIK ve KONTROLLER ---------- */
+        /* ---------- HEADER ---------- */
         header {
             margin-bottom: 2rem;
         }
 
         h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
+            font-size: 2.4rem;
+            font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, #f0f4fa 0%, #b0cce0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        h1 i {
-            color: #f0883e;
+        h1 img {
+            width: 38px;
+            height: 38px;
+            filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.3));
         }
 
         .controls {
@@ -110,28 +131,35 @@
             flex-wrap: wrap;
             gap: 1rem;
             align-items: center;
-            background: #161b22;
-            padding: 1rem 1.2rem;
-            border-radius: 12px;
-            border: 1px solid #30363d;
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #2a323d;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         #search {
-            flex: 1 1 240px;
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 0.6rem 1rem;
-            color: #e6edf3;
+            flex: 1 1 220px;
+            background: #0f141c;
+            border: 1px solid #2a323d;
+            border-radius: 40px;
+            padding: 0.6rem 1.2rem 0.6rem 2.8rem;
+            color: #e8edf5;
             font-size: 0.95rem;
             outline: none;
-            transition: border 0.2s;
+            transition: border 0.2s, box-shadow 0.2s;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238b9bb0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            background-size: 16px;
         }
         #search:focus {
-            border-color: #58a6ff;
+            border-color: #4a8c6a;
+            box-shadow: 0 0 0 3px rgba(74, 140, 106, 0.2);
         }
         #search::placeholder {
-            color: #8b949e;
+            color: #6a7a8a;
         }
 
         .filter-wrap {
@@ -142,54 +170,61 @@
         }
 
         .filter-btn {
-            background: #1a3a2a;
-            border: 1px solid #2d5a3d;
-            border-radius: 20px;
-            padding: 0.3rem 1rem;
+            background: rgba(26, 42, 50, 0.6);
+            border: 1px solid #2a3a3d;
+            border-radius: 40px;
+            padding: 0.3rem 1.2rem;
             font-size: 0.8rem;
-            color: #c9d1d9;
+            font-weight: 500;
+            color: #b0c4d9;
             cursor: pointer;
             transition: all 0.2s;
             white-space: nowrap;
+            backdrop-filter: blur(2px);
         }
         .filter-btn:hover {
-            background: #2a5a3a;
-            border-color: #58a6ff;
+            background: #1a3a2a;
+            border-color: #4a8c6a;
+            color: #fff;
         }
         .filter-btn.active {
-            background: #0f3b22;
-            border-color: #58a6ff;
+            background: #1a4a2a;
+            border-color: #5aac7a;
             color: #fff;
-            box-shadow: 0 0 0 1px #58a6ff;
+            box-shadow: 0 0 0 1px #5aac7a, 0 4px 12px rgba(74, 140, 106, 0.2);
         }
 
         .stats {
             margin-left: auto;
             font-size: 0.85rem;
-            color: #8b949e;
+            color: #8b9bb0;
+            font-weight: 400;
+            letter-spacing: 0.3px;
         }
 
         /* ---------- KART GRİD ---------- */
         #content {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 1.2rem;
+            margin-top: 2rem;
         }
 
         .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 1rem 1.2rem;
-            transition: transform 0.15s, border-color 0.2s, box-shadow 0.2s;
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(4px);
+            border: 1px solid #2a323d;
+            border-radius: 20px;
+            padding: 1.2rem 1.4rem;
+            transition: transform 0.25s ease, border-color 0.25s, box-shadow 0.25s;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
         .card:hover {
-            border-color: #58a6ff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            border-color: #4a8c6a;
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
         }
 
         .card-header {
@@ -199,12 +234,13 @@
             margin-bottom: 0.4rem;
         }
         .card-header img {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            background: #21262d;
+            background: #1e2630;
             flex-shrink: 0;
+            border: 2px solid #2a323d;
         }
         .card-header .title-group {
             flex: 1;
@@ -212,7 +248,7 @@
         }
         .card-header .title-group h3 {
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1.3;
             display: flex;
             align-items: center;
@@ -220,18 +256,18 @@
             flex-wrap: wrap;
         }
         .card-header .title-group h3 a {
-            color: #58a6ff;
+            color: #6cb4ee;
             text-decoration: none;
-            transition: color 0.2s, text-decoration 0.2s;
+            transition: color 0.2s;
         }
         .card-header .title-group h3 a:hover {
-            color: #93C572;
+            color: #8ad0a0;
             text-decoration: underline;
         }
         .verified-badge {
             color: #3ea6ff;
-            font-size: 0.9rem;
-            background: #1f3a5a;
+            font-size: 0.75rem;
+            background: #1a2a3a;
             border-radius: 50%;
             width: 20px;
             height: 20px;
@@ -239,17 +275,26 @@
             align-items: center;
             justify-content: center;
             border: 1px solid #3ea6ff;
+            flex-shrink: 0;
         }
         .card-header .subscriber-count {
-            font-size: 0.8rem;
-            color: #8b949e;
+            font-size: 0.75rem;
+            color: #8b9bb0;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .card-header .subscriber-count i {
+            color: #a0b8c8;
+            font-size: 0.7rem;
         }
 
         .card .desc {
             font-size: 0.85rem;
-            color: #8b949e;
+            color: #a0b8c8;
             margin: 0.3rem 0 0.6rem;
             flex: 1;
+            line-height: 1.4;
         }
 
         .card .meta {
@@ -258,84 +303,96 @@
             align-items: center;
             margin-top: 0.4rem;
             font-size: 0.7rem;
-            color: #8b949e;
+            color: #8b9bb0;
             flex-wrap: wrap;
             gap: 0.3rem;
         }
         .card .category-badge {
-            background: #21262d;
-            padding: 0.15rem 0.6rem;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            color: #c9d1d9;
+            background: #1a222c;
+            padding: 0.15rem 0.8rem;
+            border-radius: 40px;
+            border: 1px solid #2a3a3d;
+            color: #b0c4d9;
+            font-weight: 500;
         }
         .card .type-icon {
             display: inline-flex;
             align-items: center;
-            color: #8b949e;
-            width: 18px;
-            height: 18px;
+            color: #8b9bb0;
         }
         .card .type-icon svg {
-            width: 100%;
-            height: 100%;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
         }
 
         .card-actions {
             display: flex;
-            gap: 0.5rem;
-            margin-top: 0.6rem;
+            gap: 0.6rem;
+            margin-top: 0.8rem;
             flex-wrap: wrap;
         }
         .card-actions .btn {
-            background: #FF0000;
-            border: 1px solid #CC0000;
-            border-radius: 16px;
-            padding: 0.2rem 0.8rem;
-            font-size: 0.7rem;
+            background: #e74c3c;
+            border: none;
+            border-radius: 40px;
+            padding: 0.3rem 1.2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: #fff;
             cursor: pointer;
             transition: all 0.2s;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
-            font-weight: 500;
+            gap: 0.4rem;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
         }
         .card-actions .btn:hover {
-            background: #CC0000;
-            border-color: #FF0000;
-            transform: scale(1.02);
+            background: #c0392b;
+            transform: scale(1.03);
+            box-shadow: 0 4px 16px rgba(231, 76, 60, 0.4);
         }
         .card-actions .btn-subscribe {
-            background: #FF0000;
-            border-color: #CC0000;
+            background: #2a3a4a;
+            box-shadow: none;
+            border: 1px solid #3a4a5a;
         }
         .card-actions .btn-subscribe:hover {
-            background: #CC0000;
+            background: #3a5a6a;
+            border-color: #5a8a9a;
+            box-shadow: 0 2px 12px rgba(42, 58, 74, 0.3);
         }
         .card-actions .btn-subscribe.subscribed {
-            background: #333;
-            border-color: #555;
+            background: #1a2a2a;
+            border-color: #2a4a3a;
             opacity: 0.7;
             cursor: default;
             transform: none;
+            box-shadow: none;
+        }
+        .card-actions .btn img {
+            width: 18px;
+            height: 18px;
+            filter: invert(1);
         }
 
         /* ---------- BOŞ DURUM ---------- */
         .empty {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 3rem 1rem;
-            color: #8b949e;
+            padding: 4rem 1rem;
+            color: #8b9bb0;
             font-size: 1.1rem;
+            background: rgba(22, 27, 34, 0.4);
+            border-radius: 24px;
+            border: 1px dashed #2a323d;
         }
 
         /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
             body {
-                padding: 1rem;
+                padding: 0.8rem;
             }
             h1 {
                 font-size: 1.6rem;
@@ -343,6 +400,7 @@
             .controls {
                 flex-direction: column;
                 align-items: stretch;
+                padding: 0.8rem 1rem;
             }
             .filter-wrap {
                 flex-wrap: nowrap;
@@ -355,9 +413,17 @@
             }
             #content {
                 grid-template-columns: 1fr;
+                gap: 1rem;
             }
             .slider-track {
                 gap: 0.6rem;
+            }
+            .slider-container {
+                padding: 0.8rem 1rem;
+            }
+            .card-header img {
+                width: 42px;
+                height: 42px;
             }
         }
 
@@ -367,35 +433,39 @@
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #0d1117;
+            background: #0b0e14;
         }
         ::-webkit-scrollbar-thumb {
-            background: #30363d;
+            background: #2a3a4a;
             border-radius: 8px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #484f58;
+            background: #4a6a7a;
         }
     </style>
 </head>
 <body>
 
     <div id="app">
-        <!-- Slider (güncellenmiş kanallar - otomatik sahte veri) -->
+        <!-- Slider (güncellenmiş kanallar) -->
         <div class="slider-container" id="sliderContainer">
-            <h3>🔄 Güncellenmiş Kanallar (son video yükleyenler)</h3>
+            <h3>
+                <i class="fas fa-sync-alt"></i> Son Güncellenen Kanallar
+            </h3>
             <div class="slider-track" id="sliderTrack">
-                <!-- slider öğeleri buraya dinamik doldurulacak -->
-                <div style="color:#8b949e; padding:0.5rem;">Yükleniyor...</div>
+                <div style="color:#8b9bb0; padding:0.5rem;">Yükleniyor...</div>
             </div>
         </div>
 
         <header>
-            <h1><i class="fas fa-play-circle"></i> Harika Kanallar &amp; Kaynaklar</h1>
+            <h1>
+                <img src="https://cdn.simpleicons.org/youtube" alt="YouTube" />
+                Harika Kanallar & Kaynaklar
+            </h1>
             <div class="controls">
-                <input type="text" id="search" placeholder="🔍 Ara (kanal adı / açıklama)" />
+                <input type="text" id="search" placeholder="Ara (kanal adı / açıklama)" />
                 <div class="filter-wrap" id="filterWrap">
-                    <!-- butonlar dinamik olarak doldurulacak -->
+                    <!-- butonlar dinamik -->
                 </div>
                 <span class="stats" id="stats">0 öğe</span>
             </div>
@@ -407,7 +477,7 @@
 
     <script>
         // ============================================================
-        // 0. YARDIMCI: Deterministik sahte veri oluşturma
+        // 0. YARDIMCI: Deterministik sahte veri
         // ============================================================
         function hashCode(str) {
             let hash = 0;
@@ -421,9 +491,9 @@
 
         function getMockData(key) {
             const hash = hashCode(key);
-            const subCount = 1000 + (hash % 15000000); // 1k ile 15M arası
-            const verified = (hash % 10) < 3; // %30 onaylı
-            const daysAgo = (hash % 30); // 0-29 gün önce
+            const subCount = 1000 + (hash % 15000000);
+            const verified = (hash % 10) < 3;
+            const daysAgo = (hash % 30);
             const date = new Date();
             date.setDate(date.getDate() - daysAgo);
             const dateStr = date.toISOString();
@@ -446,7 +516,7 @@
 
         function getThumbnail(name) {
             const initials = getInitials(name);
-            return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=2d5a3d&color=fff&size=45&font-size=0.5`;
+            return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=2d5a3d&color=fff&size=50&font-size=0.5`;
         }
 
         // ============================================================
@@ -1485,7 +1555,7 @@
                 const btn = document.createElement('button');
                 btn.className = `filter-btn ${cat === activeCategory ? 'active' : ''}`;
                 btn.dataset.category = cat;
-                btn.textContent = cat === 'all' ? '🏷️ Tümü' : cat;
+                btn.textContent = cat === 'all' ? 'Tümü' : cat;
                 btn.addEventListener('click', () => {
                     activeCategory = cat;
                     renderFilters();
@@ -1510,7 +1580,7 @@
             statsEl.textContent = `${filtered.length} öğe`;
 
             if (filtered.length === 0) {
-                content.innerHTML = `<div class="empty">😕 Aradığınız kriterlerde hiç öğe bulunamadı.</div>`;
+                content.innerHTML = `<div class="empty">Aradığınız kriterlerde hiç öğe bulunamadı.</div>`;
                 return;
             }
 
@@ -1523,14 +1593,14 @@
                 }
 
                 const subs = isYoutube ? formatSubs(mock.subscriberCount) : '';
-                const verifiedBadge = (isYoutube && mock.verified) ? `<span class="verified-badge" title="Onaylanmış kanal">✓</span>` : '';
+                const verifiedBadge = (isYoutube && mock.verified) ? `<span class="verified-badge" title="Onaylanmış kanal"><i class="fas fa-check"></i></span>` : '';
                 let lastUpdate = '';
                 if (isYoutube && mock.lastVideoDate) {
                     const d = new Date(mock.lastVideoDate);
-                    lastUpdate = `📅 ${d.toLocaleDateString('tr-TR')}`;
+                    lastUpdate = `<i class="far fa-calendar-alt"></i> ${d.toLocaleDateString('tr-TR')}`;
                 }
 
-                const thumbnail = isYoutube ? getThumbnail(item.name) : 'https://ui-avatars.com/api/?name=...&background=2d5a3d&color=fff&size=45';
+                const thumbnail = isYoutube ? getThumbnail(item.name) : 'https://ui-avatars.com/api/?name=...&background=2d5a3d&color=fff&size=50';
                 const iconSvg = iconMap[item.type] || iconMap.other;
 
                 html += `
@@ -1542,7 +1612,7 @@
                                     <a href="${item.url}" target="_blank" rel="noopener">${item.name}</a>
                                     ${verifiedBadge}
                                 </h3>
-                                ${subs ? `<div class="subscriber-count">👥 ${subs} abone</div>` : ''}
+                                ${subs ? `<div class="subscriber-count"><i class="fas fa-users"></i> ${subs} abone</div>` : ''}
                                 ${lastUpdate ? `<div class="subscriber-count" style="font-size:0.7rem;">${lastUpdate}</div>` : ''}
                             </div>
                         </div>
@@ -1552,7 +1622,10 @@
                             <span class="type-icon">${iconSvg}</span>
                         </div>
                         <div class="card-actions">
-                            <a href="${item.url}" target="_blank" class="btn"><i class="fab fa-youtube"></i> İzle</a>
+                            <a href="${item.url}" target="_blank" class="btn">
+                                <img src="https://cdn.simpleicons.org/youtube" alt="YouTube" style="width:18px;height:18px;filter:invert(1);" />
+                                İzle
+                            </a>
                             <button class="btn btn-subscribe" data-url="${item.url}"><i class="fas fa-bell"></i> Abone Ol</button>
                         </div>
                     </div>
@@ -1578,14 +1651,13 @@
         // 5. SLIDER (güncellenmiş kanallar - mock veri ile)
         // ============================================================
         function updateSlider() {
-            // YouTube kanallarını mock tarihe göre sırala
             const sorted = youtubeItems.slice(0, 20).map(item => {
                 const mock = getMockData(item.url + item.name);
                 return { ...item, mockDate: new Date(mock.lastVideoDate) };
             }).sort((a, b) => b.mockDate - a.mockDate).slice(0, 10);
 
             if (sorted.length === 0) {
-                sliderTrack.innerHTML = '<div style="color:#8b949e;padding:0.5rem;">Henüz güncellenmiş kanal verisi yok.</div>';
+                sliderTrack.innerHTML = '<div style="color:#8b9bb0;padding:0.5rem;">Henüz güncellenmiş kanal verisi yok.</div>';
                 return;
             }
 
@@ -1598,7 +1670,7 @@
                         <img src="${thumb}" alt="${ch.name}" />
                         <div class="info">
                             <span class="name">${ch.name}</span>
-                            <span class="date">📅 ${dateStr}</span>
+                            <span class="date"><i class="far fa-calendar-alt" style="margin-right:4px;"></i>${dateStr}</span>
                         </div>
                     </div>
                 `;
